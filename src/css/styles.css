@@ -1,0 +1,278 @@
+.main-container {
+    display: flex;
+    justify-content: space-between;
+    height: 100dvh;
+    overflow: hidden;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Estilos para el contenedor del login */
+
+.login-container {
+    display: grid;
+    justify-items: start;
+    padding-left: 6.3rem;
+    width: 60%;
+}
+
+.logo-container {
+    text-align: center;
+    margin-top: 4rem;
+}
+
+.logo-container img {
+    width: 4.8rem;
+}
+
+.logo-container h2 {
+    font-size: 2.8rem;
+    color: var(--color-primary);
+    ;
+    margin-top: 0px;
+}
+
+
+/* Estilos para el encabezado del login */
+
+.form-container {
+    max-width: 438px;
+    padding: 1rem;
+    height: fit-content;
+    background-color: #FFF;
+    box-shadow: 1px 2px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.login-header {
+    display: grid;
+    justify-items: center;
+    margin-bottom: 2rem;
+}
+
+.login-header h2 {
+    color: #292F61;
+    font-size: 4rem;
+    margin: 1.4rem 0 1.5rem;
+}
+
+.login-header h3 {
+    font-weight: 500;
+    margin: 0;
+    padding-left: 1.1rem;
+    font-size: 1.6rem;
+    color: var(--color-secondary);
+}
+
+/* Estilos para los grupos de entrada */
+.input-group {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+
+.input-group label {
+    color: var(--color-primary);
+    font-weight: 700;
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+}
+
+.input-group input {
+    border: var(--color-accent) 1px solid;
+    color: var(--color-secondary);
+    border-radius: 8px;
+    padding: 1rem;
+}
+
+.input-group input[name="password"] {
+    padding-right: 30px;
+}
+
+.input-group .toggle-password {
+    position: absolute;
+    right: 12px;
+    top: 72%;
+    cursor: pointer;
+    transform: translateY(-50%);
+}
+
+/* Estilos para el botón de inicio de sesión */
+.button-login {
+    padding: 1rem;
+    margin-top: 4rem;
+    color: #FFF;
+    font-weight: 600;
+    background-color: var(--color-primary);
+    border: none;
+    border-radius: 8px;
+    width: 100%;
+    cursor: pointer;
+}
+
+/* Estilos para el pie de página del login */
+.login-footer h3 {
+    color: var(--color-secondary);
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.login-footer h3 a {
+    font-weight: 700;
+    text-decoration: none;
+}
+
+/* Estilos para el "landing" */
+
+.information-container {
+    position: relative;
+    padding-top: 8rem;
+    width: 100%;
+}
+
+.information-container h2 {
+    font-size: 3.4rem;
+    font-weight: 700;
+    margin-bottom: 5.6rem;
+}
+
+.image-landing {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+}
+
+.information-text-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.5rem;
+    padding-right: 4rem;
+    z-index: 1;
+}
+
+
+[class*="log-inf"] {
+    width: 42rem;
+    height: 12rem;
+    padding: 2.5rem 2.8rem 0rem 8rem;
+    z-index: 1;
+    background-color: #FFF;
+    font-size: 1.4rem;
+    font-weight: 700;
+    box-shadow: 0px 14.565px 36.413px 0px rgba(0, 0, 0, 0.5);
+    border-radius: 0.8rem;
+    position: relative;
+}
+
+[class*="log-inf"]::after {
+    content: url("../../assets/images/circle-icon.svg");
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 26%;
+    z-index: 3;
+    width: 2.7rem;
+    height: 2.7rem;
+    border-radius: 50%;
+    background-color: #E8F9EE;
+    left: 7%;
+}
+
+.log-inf-1 {
+    align-self: flex-start;
+}
+
+
+.log-inf-2 {
+    align-self: flex-end;
+}
+
+.log-inf-2::after {
+    content: url("../../assets/images/location-icon.svg");
+    ;
+    background-color: #E5E5FE;
+}
+
+.log-inf-3 {
+    align-self: flex-start;
+}
+
+/* Estilos para la animacion */
+
+.log-inf-a1 {
+    opacity: 0;
+    animation: bounce 0.7s 4, fadeInOnce 2s forwards;
+}
+
+.log-inf-a2 {
+    opacity: 0;
+    animation: bounce 0.7s 4 1s, fadeInOnce 2s 1s forwards;
+}
+
+.log-inf-a3 {
+    opacity: 0;
+    animation: bounce 0.7s 4 2s, fadeInOnce 2s 2s forwards;
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInOnce {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
+/* MediaQuerys */
+
+@media screen and (max-width: 1500px) {
+    .login-container {
+        width: 78%;
+    }
+
+    .information-container h2 {
+        font-size: 2.5rem;
+    }
+
+    [class*="log-inf"] {
+        width: 33rem
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .information-container {
+        display: none;
+    }
+
+    .login-container {
+        width: 100%;
+        padding: 1.3rem;
+        justify-items: center;
+    }
+
+    .form-container {
+        box-shadow: 1px 1px 13px 4px rgba(0, 0, 0, 0.25);
+    }
+
+    .login-header h2 {
+        font-size: 2.9rem;
+    }
+}
