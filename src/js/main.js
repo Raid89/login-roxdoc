@@ -2,9 +2,10 @@
 const buttonTooglePass = document.getElementById('togglePasswordButton');
 
 const tooglePassword = () => {
-    const typeInputPassword = document.getElementById('inputPassword')?.type;
+    const inputPassword = document.getElementById('inputPassword');
+    const typeInputPassword = inputPassword?.type;
     const newInputType = typeInputPassword === 'text' ? 'password' : 'text';
-    inputPassword.type = newInputType
+    inputPassword.type = newInputType;
 }
 
 buttonTooglePass.addEventListener('click', tooglePassword);
