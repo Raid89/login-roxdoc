@@ -266,6 +266,11 @@
         width: 100%;
         padding: 1.3rem;
         justify-items: center;
+        align-items: center;
+    }
+
+    .logo-container {
+        display: none;
     }
 
     .form-container {

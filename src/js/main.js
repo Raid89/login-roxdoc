@@ -13,7 +13,7 @@ buttonTooglePass.addEventListener('click', tooglePassword);
 // Función para guardar los datos del formulario y mostrarlos en consola
 const formButtonLogin = document.getElementById('formButtonLogin');
 
-const guardarDatosFormulario = (event) => {
+const saveFormData = (event) => {
     event.preventDefault();
     const inputUsuario = document.getElementById('inputUsuario').value;
     const inputPassword = document.getElementById('inputPassword').value;
