@@ -1,5 +1,6 @@
 // Función para el toggle de la contraseña
 const buttonTooglePass = document.getElementById('togglePasswordButton');
+const buttonLanguage = document.querySelector('.languageBtn');
 
 const tooglePassword = () => {
     const inputPassword = document.getElementById('inputPassword');
@@ -24,4 +25,27 @@ const saveFormData = (event) => {
     console.log('Contraseña:', inputPassword);
 }
 
-formButtonLogin.addEventListener('click', guardarDatosFormulario);
+formButtonLogin.addEventListener('click', saveFormData);
+
+// Función para mostrar u ocultar el desplegable al hacer clic en el botón
+function toggleDropdownLanguage() {
+    var dropdown = document.getElementById("languageDropdown");
+    dropdown.classList.toggle("show");
+}
+
+buttonLanguage.addEventListener('click', toggleDropdownLanguage)
+
+// Cerrar el desplegable si el usuario hace clic fuera de él
+window.onclick = function(event) {
+    console.log(event.target);
+  if (!event.target.matches('.item-language')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
